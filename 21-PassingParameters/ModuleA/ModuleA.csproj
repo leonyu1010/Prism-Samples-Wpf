@@ -5,6 +5,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.Wpf" Version="7.2.0.1367" />
+    <ProjectReference Include="..\..\Microsoft.Xaml.Behaviors\Microsoft.Xaml.Behaviors.csproj" />
+    <ProjectReference Include="..\..\Prism\Prism.csproj" />
+    <ProjectReference Include="..\..\Wpf\Prism.Wpf\Prism.Wpf.csproj" />
   </ItemGroup>
 </Project>

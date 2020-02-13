@@ -4,6 +4,8 @@
         xmlns:prism="http://prismlibrary.com/"
         Title="Shell" Height="350" Width="525">
     <Grid>
-        <StackPanel prism:RegionManager.RegionName="ContentRegion" />
+        <StackPanel prism:RegionManager.RegionName="ContentRegion">
+            <TextBlock Foreground="Red">StackPanel region</TextBlock>
+        </StackPanel>
     </Grid>
 </Window>

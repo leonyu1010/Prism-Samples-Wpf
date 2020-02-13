@@ -11,7 +11,7 @@ namespace ModuleA
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
-            IRegion region = regionManager.Regions["ContentRegion"];
+            IRegion region = regionManager.Regions["TabRegion"];
 
             var tabA = containerProvider.Resolve<TabView>();
             SetTitle(tabA, "Tab A");
@@ -28,10 +28,9 @@ namespace ModuleA
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
         }
 
-        void SetTitle(TabView tab, string title)
+        private void SetTitle(TabView tab, string title)
         {
             (tab.DataContext as TabViewModel).Title = title;
         }

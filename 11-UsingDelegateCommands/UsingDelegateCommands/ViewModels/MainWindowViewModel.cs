@@ -7,6 +7,7 @@ namespace UsingDelegateCommands.ViewModels
     public class MainWindowViewModel : BindableBase
     {
         private bool _isEnabled;
+
         public bool IsEnabled
         {
             get { return _isEnabled; }
@@ -18,21 +19,20 @@ namespace UsingDelegateCommands.ViewModels
         }
 
         private string _updateText;
+
         public string UpdateText
         {
             get { return _updateText; }
             set { SetProperty(ref _updateText, value); }
         }
 
-
         public DelegateCommand ExecuteDelegateCommand { get; private set; }
 
-        public DelegateCommand<string> ExecuteGenericDelegateCommand { get; private set; }        
+        public DelegateCommand<string> ExecuteGenericDelegateCommand { get; private set; }
 
         public DelegateCommand DelegateCommandObservesProperty { get; private set; }
 
         public DelegateCommand DelegateCommandObservesCanExecute { get; private set; }
-
 
         public MainWindowViewModel()
         {

@@ -29,12 +29,12 @@ namespace ModuleA.ViewModels
 
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
-            
+            int a = 0;
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            
+            int a = 0;
         }
     }
 }

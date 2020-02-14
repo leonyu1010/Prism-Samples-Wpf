@@ -3,9 +3,9 @@ using Prism.Regions;
 
 namespace ModuleA.ViewModels
 {
-    public class ViewBViewModel : BindableBase, INavigationAware
+    public class ViewCViewModel : BindableBase, INavigationAware
     {
-        private string _title = "ViewB";
+        private string _title = "ViewC";
 
         public string Title
         {
@@ -21,7 +21,7 @@ namespace ModuleA.ViewModels
             set { SetProperty(ref _pageViews, value); }
         }
 
-        public ViewBViewModel()
+        public ViewCViewModel()
         {
         }
 
@@ -32,7 +32,7 @@ namespace ModuleA.ViewModels
 
         public bool IsNavigationTarget(NavigationContext navigationContext)
         {
-            return PageViews / 6 != 1;
+            return false;
         }
 
         public void OnNavigatedFrom(NavigationContext navigationContext)

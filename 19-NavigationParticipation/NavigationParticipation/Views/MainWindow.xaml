@@ -10,12 +10,17 @@
             <Setter Property="Header" Value="{Binding DataContext.Title}" />
         </Style>
     </Window.Resources>
-    
+
     <DockPanel LastChildFill="True">
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="5" >
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="5">
             <Button Command="{Binding NavigateCommand}" CommandParameter="ViewA" Margin="5">Navigate to View A</Button>
             <Button Command="{Binding NavigateCommand}" CommandParameter="ViewB" Margin="5">Navigate to View B</Button>
         </StackPanel>
-        <TabControl prism:RegionManager.RegionName="ContentRegion" Margin="5"  />
+        <TabControl prism:RegionManager.RegionName="UpRegion" Margin="5" />
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" Margin="5">
+            <Button Command="{Binding Navigate2Command}" CommandParameter="ViewC" Margin="5">Navigate to View C</Button>
+            <Button Command="{Binding Navigate2Command}" CommandParameter="ViewD" Margin="5">Navigate to View D</Button>
+        </StackPanel>
+        <ContentControl prism:RegionManager.RegionName="DownRegion" Margin="5" />
     </DockPanel>
 </Window>

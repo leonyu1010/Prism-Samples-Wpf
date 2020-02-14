@@ -9,7 +9,8 @@ namespace UsingCompositeCommands.Core
 
     public class ApplicationCommands : IApplicationCommands
     {
-        private CompositeCommand _saveCommand = new CompositeCommand(true);
+        private CompositeCommand _saveCommand = new CompositeCommand(false);
+
         public CompositeCommand SaveCommand
         {
             get { return _saveCommand; }

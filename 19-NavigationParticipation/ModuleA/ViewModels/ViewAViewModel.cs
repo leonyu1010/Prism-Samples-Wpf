@@ -6,6 +6,7 @@ namespace ModuleA.ViewModels
     public class ViewAViewModel : BindableBase, INavigationAware
     {
         private string _title = "ViewA";
+
         public string Title
         {
             get { return _title; }
@@ -13,6 +14,7 @@ namespace ModuleA.ViewModels
         }
 
         private int _pageViews;
+
         public int PageViews
         {
             get { return _pageViews; }
@@ -21,7 +23,6 @@ namespace ModuleA.ViewModels
 
         public ViewAViewModel()
         {
-
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)
@@ -31,12 +32,11 @@ namespace ModuleA.ViewModels
 
         public bool IsNavigationTarget(NavigationContext navigationContext)
         {
-            return true;
+            return PageViews / 3 != 1;
         }
 
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
-            
         }
     }
 }
